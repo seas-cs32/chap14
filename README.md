@@ -1,6 +1,7 @@
 This directory contains everything needed for
 **Chapter 14 (The Dream of Bug Fixing)** in
-*Computational Thinking and Problem Solving*.
+[*Computational Thinking and Problem Solving (CTPS)*](https://profsmith89.github.io/ctps/ctps.html)
+by Michael D. Smith.
 
 `analyze.py`: A script that allows us to easily apply an analysis
 function to a function (possibly coupled with a function input) that
