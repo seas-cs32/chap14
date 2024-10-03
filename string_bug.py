@@ -29,7 +29,7 @@ def string_bug(f):
             return "Yes" 
 
     # Make sure the last string ended with a double quote, which
-    # means the length of work_list should odd.
+    # means the length of work_list should be odd.
     if items & 1 != 1:
         return "Yes"
     

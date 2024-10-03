@@ -1,7 +1,7 @@
 ### chap14/yes.py
 
 def yes(f, s):
-    '''An analysis function that no analysis
+    '''An analysis function that does no analysis
     and always returns Yes.'''
     return "Yes"
 
