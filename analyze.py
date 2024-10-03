@@ -31,8 +31,20 @@ def main():
         fun_input = sys.argv[3]
     else:
         fun_input = None
+    
+    # Catch the error of placing a `.py` at the end of the function names
+    if analysis_name[-3:] == '.py' or fun_name[-3:] == '.py':
+        sys.exit('Usage: use function names, not filenames (i.e., no `.py`)')
+
     analyze(analysis_name, fun_name, fun_input)
 
 if __name__ == '__main__':
     main()
-    
+
+# Testing `analyze`:
+#
+# Run `python3 analyze.py string_bug hello`, which should print `No`
+#
+# Run `python3 analyze.py string_bug contains_dquote`, which should print `Yes`
+#
+# Run `python3 analyze.py yep hello world`, which should print `Yes`

@@ -7,7 +7,7 @@ def yes(f, s):
 
 
 def main():
-    # Test function above
+    # Tests for our `yes` function
     import our_tools
 
     print('\nTEST #1: short s')

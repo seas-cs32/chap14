@@ -9,19 +9,19 @@ def grab_f(fun_name):
     name (i.e., `fun_name.py`).'''
     try:
         fun_module = importlib.import_module(fun_name)
-        fun = getattr(fun_module, fun_name)
-        f = inspect.getsource(fun)
+        fun_object = getattr(fun_module, fun_name)
+        fun_src = inspect.getsource(fun_object)
     except SyntaxError:
         # Use the helper function instead
-        f = grab_f_with_error(fun_name)
-    return f
+        fun_src = grab_f_with_error(fun_name)
+    return fun_src
 
 
 def grab_f_with_error(fun_name):
     '''A helper function that handles the work of `grab_f`
     when `fun_name` contains a syntax error.'''
     mod_name = fun_name + '.py'
-    f = ''
+    fun_src = ''
     the_line = ' '
 
     # What we're searching for
@@ -33,14 +33,14 @@ def grab_f_with_error(fun_name):
         while the_line != '':
             the_line = fin.readline()
             if the_line[:prefix_len] == prefix:
-                f += the_line
+                fun_src += the_line
                 break
 
         # Grab entire body of f
         the_line = fin.readline()
         while the_line != '' and the_line[0] == ' ':
-            f += the_line
+            fun_src += the_line
             the_line = fin.readline()
 
-    assert f != '', f"Didn't find {fun_name} in {mod_name}"
-    return f
+    assert fun_src != '', f"Didn't find {fun_name} in {mod_name}"
+    return fun_src

@@ -34,3 +34,27 @@ def string_bug(f):
         return "Yes"
     
     return "No"
+
+def main():
+    # Tests for our `string_bug` function
+
+    # Should print `No`
+    print('\nTEST #1')
+    hello_str = '''def hello(s):
+    print("Hello", s)
+'''
+    print(string_bug(hello_str))
+
+    # Should print `Yes`
+    print('\nTEST #2')
+    hellu_str = '''def hellu(s):
+    print("Hello, s)
+'''
+    print(string_bug(hellu_str))
+
+    # Should print `No`
+    print('\nTEST #3')
+    print(string_bug(''))
+
+if __name__ == '__main__':
+    main()

@@ -15,7 +15,7 @@ def yep(f, s):
 
 
 def main():
-    # Test function above
+    # Tests for our `yep` function
     import our_tools
 
     print(f"\nTEST #1: DON'T trip backdoor")

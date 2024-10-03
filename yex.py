@@ -15,15 +15,17 @@ def yex(f, s):
 
 
 def main():
-    # Test function above
+    # Tests for our `yex` function
     import our_tools
 
-    print(f"\nTEST #1: trip backdoor")
-    s = 'world'
+    # Should print `Yes`
+    print("\nTEST #1: DON'T trip backdoor")
+    s = 'beQuick'
     print(yex(our_tools.grab_f('hello'), s))
 
-    print("\nTEST #2: DON'T trip backdoor")
-    s = 'beQuick'
+    # Should get caught in an infinite loop
+    print(f"\nTEST #2: trip backdoor")
+    s = 'world'
     print(yex(our_tools.grab_f('hello'), s))
 
 if __name__ == '__main__':

@@ -11,7 +11,8 @@ hello_str = '''def hello(s):
 hello_src = inspect.getsource(hello)
 
 def main():
-    # Test our function and string definitions
+    # Tests for our `yes` function
+    
     print('\nTEST #1')
     hello("world")
 

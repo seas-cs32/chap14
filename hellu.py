@@ -5,4 +5,3 @@ def hellu(s):
 
 if __name__ == '__main__':
     hellu("world")
-    
