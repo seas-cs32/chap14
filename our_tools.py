@@ -4,7 +4,7 @@ import inspect
 
 def grab_f(fun_name):
     '''A utility function that returns a string containing the
-    statements for `fun_name`. Its implementation assumes that
+    source code for `fun_name`. Its implementation assumes that
     the function `fun_name` is in a Python script of the same
     name (i.e., `fun_name.py`).'''
     try:
