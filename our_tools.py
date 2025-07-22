@@ -4,9 +4,9 @@ import inspect
 
 def grab_f(fun_name):
     '''A utility function that returns a string containing the
-    source code for `fun_name`. Its implementation assumes that
-    the function `fun_name` is in a Python script of the same
-    name (i.e., `fun_name.py`).'''
+    source code for fun_name. Its implementation assumes that
+    the function fun_name is in a Python script of the same
+    name (i.e., fun_name.py).'''
     try:
         fun_module = importlib.import_module(fun_name)
         fun_object = getattr(fun_module, fun_name)

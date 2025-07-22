@@ -4,13 +4,13 @@ import importlib
 import our_tools
 
 def analyze(analysis_name, fun_name, s=None):
-    # Grab the analysis function from its module. This code assumes that the
-    # `analysis_name` is in `analysis_name.py`.
+    # Grab the analysis function from its module. This code assumes
+    # that the analysis_name is in analysis_name.py.
     analysis_mod = importlib.import_module(analysis_name)
     analysis_fun = getattr(analysis_mod, analysis_name)
 
     # Grab function to analyze. The utility used assumes that
-    # the function `fun_name` is in `fun_name.py`.
+    # the function fun_name is in fun_name.py.
     f = our_tools.grab_f(fun_name)
 
     # Do the analysis
@@ -22,7 +22,7 @@ def analyze(analysis_name, fun_name, s=None):
 
 
 def main():
-    if  len(sys.argv) != 3 and len(sys.argv) != 4:
+    if len(sys.argv) != 3 and len(sys.argv) != 4:
         sys.exit('Usage: python3 analyze.py analysis_fun analyzed_fun [s]')
 
     analysis_name = sys.argv[1]
